@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+  <!--   <script src="./x2js.js"></script> -->
+    <script src="./main.js"></script>
+</head>
+<body>
+        <div id="content-atention">
+            <div class="Form-container">
+                <form name="formAttention" id="attention-form" action="#">
+                    <div class="field-container">
+                        <div class="field-wrap">
+                            <div class="field-label">
+                                <label for="select-attention">
+                                    Tipo de Atención<span>(*)</span>
+                                </label>
+                            </div>
+                            <div class="field-element">
+                                <select name="select-attention" id="select-attention" required>
+                                    <option value="" selected>Seleccione</option>
+                                    <option value="Reclamo">Reclamo</option>
+                                    <option value="Solicitud">Solicitud</option>
+                                    <option value="Queja">Queja</option>
+                                </select>
+                                <error-msg></error-msg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                            <div class="field-wrap">
+                                <div class="field-label">
+                                    <label for="input-name">Nombres y Apellidos o Razón Social<span>(*)</span></label>
+                                </div>
+                                <div class="field-element">
+                                    <input name="input-name" id="input-name" type="text" placeholder="Ingresa tu nombres y apellidos" required>
+                                    <error-msg></error-msg>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="field-container">
+                        <div class="field-wrap">
+                            <div class="field-label">
+                                        <label for="select-tipoDocumento">Tipo de documento<span>(*)</span></label>
+                            </div>
+                            <div class="field-element">
+                                <select onchange="changeSelectFormAttention(this)" name="select-tipoDocumento" id="select-tipoDocumento" required>
+                                    <option value="" selected disabled>Seleccione</option>
+                                    <option value="DNI" selected>DNI</option>
+                                    <option value="RUC">RUC</option>
+                                    <option value="CE">C.E</option>
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="field-wrap mleftForm">
+                            <div class="field-label">
+                                    <label for="input-nroDocument">Número de documento<span>(*)</span></label>
+                            </div>
+                            <div class="field-element">
+                                    <input type="number" name="input-nroDocument" id="input-nroDocument" maxlength="8" placeholder="Ingrese su número de documento" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <div class="field-wrap">
+                            <div class="field-label">
+                                <label for="input-telefono">Teléfono</label>
+                            </div>
+                            <div class="field-element">
+                                <input type="number" name="input-telefono" maxlength="9" placeholder="Ingrese tu número ">
+                            </div>
+                        </div>
+                        <div class="field-wrap mleftForm">
+                            <div class="field-label">
+                                <label for="input-correo">Correo</label>
+                            </div>
+                            <div class="field-element">
+                                <input type="email" name="input-correo" id="input-correo" placeholder="Ingrese tu correo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <div class="field-wrap">
+                            <div class="field-label">
+                                <label for="select-temaRelacionado">Tema relacionado<span>(*)</span></label>
+                            </div>
+                            <div class="field-element">
+                                <select name="select-temaRelacionado" id="select-temaRelacionado" required>
+                                    <option value="" selected disabled >Seleccione</option>
+                                    <option value="mantinimiento">Mantinimiento</option>
+                                    <option value="obras">Obras</option>
+                                    <option value="operacion-vial">Operación vial</option>
+                                    <option value="aut-lima-expresa">ATU LIMA EXPRESA</option>
+                                    <option value="web-lima-expresa">Web LIMA EXPRESA</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <div class="field-wrap">
+                            <div class="field-label">
+                                    <label for="input-file">Adjuntar archivo</label>
+                            </div>
+                            <div class="field-element inputFileForm">
+                                <input type="file" name="input-file-form" id="input-file-form" placeholder="Seleccione archivo">
+                                <input type="text" id="input-file-form-text" disabled placeholder="Seleccione archivo">
+                                <label for="input-file-form">
+                                    <img src="data:image/svg+xml,%3Csvg width='28' height='26' viewBox='0 0 28 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.1667 15.3333H18.6667V17.6666H15.1667V21.1666H12.8333V17.6666H9.33333V15.3333H12.8333V11.8333H15.1667V15.3333ZM28 5.99996V25.8333H0V3.66663C0 2.73837 0.368749 1.84813 1.02513 1.19175C1.6815 0.535375 2.57174 0.166626 3.5 0.166626H9.60866L14.2753 2.49996H24.5C25.4283 2.49996 26.3185 2.86871 26.9749 3.52509C27.6312 4.18146 28 5.0717 28 5.99996ZM2.33333 3.66663V7.16663H25.6667V5.99996C25.6667 5.69054 25.5437 5.39379 25.325 5.175C25.1062 4.95621 24.8094 4.83329 24.5 4.83329H13.7247L9.058 2.49996H3.5C3.19058 2.49996 2.89383 2.62288 2.67504 2.84167C2.45625 3.06046 2.33333 3.35721 2.33333 3.66663ZM25.6667 23.5V9.49996H2.33333V23.5H25.6667Z' fill='white'/%3E%3C/svg%3E%0A" alt="file">
+                                </label>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="field-container mbotForm">
+                        <div class="field-wrap">
+                            <div class="field-label">
+                                <label for="input-checkboxTerm">  
+                                </label>
+                            </div>
+                            <div class="field-element">
+                                <div class="flex">
+                                    <input type="checkbox" name="input-checkboxTerm" id="input-checkboxTerm" required>
+                                    <label for="input-checkboxTerm" id="label-checkboxTerm">Al enviar este formulario de registro, indico que he leído y estoy de acuerdo con los
+                                        <a href="#">Términos y Condiciones de privacidad</a>
+                                        y otras condiciones establecidas. Aviso de Privacidad de Tratamiento de Datos.
+                                    </label>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <div class="field-wrap">
+                            <div class="field-label">
+    
+                            </div>
+                            <div class="field-element">
+                                    <input class="form-button-requeriment" type="submit" value="Enviar">
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="error-message">
+                        <p>Ocurrio un error inesperado al enviar el formulario.</p>
+                    </div>
+                    <div class="succesfull-message">
+                        <p>Enviado del formulario correctamente</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+
+        <div id="content-requeriment">
+            <div class="container-requerimentQuery">
+                <div class="title-requeriment">
+                    <h6>ATENCIÓN AL CLIENTE - CONSULTAS</h6>
+                    <h4>(*) Estos campos deben ser llenados obligatoriamente.</h4>
+                </div>
+                <div class="container-form-requeriment">
+                    <form name="formRequeriment" id="requeriment-form" action="#">
+                        <div class="field-container">
+                            <div class="field-wrap">
+                                <div class="field-label">
+                                    <label for="selectAttention-tipoDocumento">Tipo de documento<span>(*)</span></label>                                        
+                                </div>
+                                <div class="field-element">
+                                    <select onchange="changeSelectFormRequeriment(this)" name="selectAttention-tipoDocumento" id="selectAttention-tipoDocumento" required>
+                                        <option value="" selected disabled>Seleccione</option>
+                                        <option value="nro-req">NRO. REQ.</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="RUC">RUC</option>
+                                        <option value="CE">C.E</option>
+                                    </select>
+                                    <error-msg></error-msg>  
+                                </div>
+                            </div>  
+                            <div class="field-wrap mleftForm">
+                                <div class="field-label">
+                                    <label for="inputAttention-nroDocument">Número de documento<span>(*)</span></label>                                            
+                                </div>
+                                <div class="field-element">
+                                    <input type="number" name="inputAttention-nroDocument" id="inputAttention-nroDocument" minlength="8" required>                                        
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="field-container">
+                                <div class="requeriment-message-before">
+                                    <p>Estimado Usuario, ante cualquier duda o consulta sobre su requerimiento, le agradecemos contactanos por e-mail a <span>servicioalcliente@limaexpresa.pe</span></p>
+                                </div>
+                        </div>
+                        <div class="field-container">
+                                <div class="field-wrap center">
+                                        <input class="form-button-requeriment" type="submit" value="Buscar">
+                                </div>
+                        </div> 
+                    </form>
+                </div>
+
+                <div class="container-search">
+                        <div clsas="serachRequeriment-result">
+                            <h2>RESULTADOS DE LA BUSQUEDA</h2>
+                        </div>
+                        <div class="boxResult tableResult-Requeriment">
+                                <table id="tableResultRequeriment">
+                                        <thead>
+                                                <th>N° REQ.</th>
+                                                <th>FECHA</th>
+                                                <th>TEMA RELACIONADO</th>
+                                                <th>CATEGORIA</th>
+                                                <th>ESTADO</th>
+                                        </thead>
+                                       
+                                </table> 
+                             
+                        </div> 
+                        <div class="boxResult boxResult-detail">
+                                <div class="boxDetail-content">
+                                    <div class="boxDetail-row">
+                                            <div class="boxDetail-item">
+                                                    <p>Fecha de Requerimiento:</p>
+                                                    <span id="Fecha"></span>
+                                            </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Nombres:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>                                                                      
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Tipo de Documento:</p>
+                                            <span></span>
+                                        </div>
+                                        <div class="boxDetail-item">
+                                            <p>N° de Documento:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Teléfono:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Relacionado a:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>E-mail:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Asunto:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Descripción:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Respuesta:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Estado:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="boxDetail-row">
+                                        <div class="boxDetail-item">
+                                            <p>Fecha Cierre:</p>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                       
+                        </div>
+                        <div class="boxResult boxResult-Error">
+                                    <p class="boxResult-Error--Text">NO SE ENCONTRARON RESULTADOS</p>
+                        </div>
+                        <div class="requeriment-message-after">
+                            <p>Estimado Usuario, ante cualquier duda o consulta sobre su requerimiento, le agradecemos contactanos por e-mail a <span>servicioalcliente@limaexpresa.pe</span></p>
+                        </div>
+                </div>
+                <div id="myModalRequeriment" class="modalRequeriment">
+                    
+                    <div class="modalContentRequeriment">     
+                        <div class="exitModalRequeriment">X</div>
+                       <div class="modalRequeriment-header">
+                                <h1 class="modalRequeriment-header-title">DETALLE DEL REQUERIMIENTO <span></span></h1>
+                        </div>      
+                        <div class="content-body-modalRequeriement">
+                            <div class="modalRequeriment-row">
+                                    <div class="modalRequeriment-row-item">
+                                        <p></p>
+                                        <span></span>
+                                    </div>       
+                            </div>
+                            <div class="modalRequeriment-row">
+                                <div class="modalRequeriment-row-item">
+                                        <p></p>
+                                        <span></span>
+                                </div>       
+                            </div>
+                            <div class="modalRequeriment-row">
+                            <div class="modalRequeriment-row-item">
+                                    <p></p>
+                                    <span></span>
+                            </div>       
+                            <div class="modalRequeriment-row-item">
+                                <p></p>
+                                <span></span>
+                            </div>       
+                            </div>
+                            <div class="modalRequeriment-row">
+                                <div class="modalRequeriment-row-item">
+                                        <p></p>
+                                        <span></span>
+                                </div>       
+                            </div>
+                            <div class="modalRequeriment-row">
+                                <div class="modalRequeriment-row-item">
+                                        <p></p>
+                                    <span></span>
+                                </div>       
+                            </div>
+                            <div class="modalRequeriment-row">
+                                <div class="modalRequeriment-row-item">
+                                        <p></p>
+                                        <span></span>
+                                </div>       
+                            </div>
+                            <div class="modalRequeriment-row">
+                                <div class="modalRequeriment-row-item">
+                                    <p></p>
+                                        <span></span>
+                                </div>       
+                            </div>
+                            <div class="modalRequeriment-row">
+                                <div class="modalRequeriment-row-item">
+                                        <p></p>
+                                        <span></span>
+                                </div>       
+                            </div>
+                        </div>
+                        <div class="content-fotter-modalRequeriment">
+                                <button onclick="close()" class="button-primary-modal">Cerrar</button>
+                        </div>  
+                    </div>
+                  
+                </div> 
+                
+            </div> 
+        </div>
+    
+</body>
+</html>

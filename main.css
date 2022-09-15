@@ -1,0 +1,466 @@
+.separator{
+    width: 100%;
+    height: 100px;
+    background: red;
+}
+
+/*
+    background-image:url('/wp-content/themes/movedo/images/graphics/select-icon.png');
+    background-image:url('https://pla.in.net/lima-expresa/wp-content/themes/movedo/images/graphics/select-icon.png');
+*/
+/* form attention customer*/
+#content-atention{
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.Form-container{
+    padding:30px 50px;
+}
+
+.field-container{
+    display: flex;
+    width: 100%;
+}
+.field-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.field-label{
+    font-family: 'Vinci Sans';
+    color: #5c5c5c;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.field-label label{
+    border-color: #5c5c5c;
+}
+
+.field-element{
+    display: flex;
+    width: 100%;
+    font-family: 'Vinci Sans';
+    color: #5c5c5c;
+}
+.field-element select,input{
+    width: 100%;
+    border: 1px solid #CECECE !important;
+    border-radius: 10px !important;
+    margin-bottom: 20px;
+}
+.field-element>select{
+/*     height: 40px; */
+}
+
+.field-element>input{
+    height: 36px;
+}
+
+.field-element select{
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.0331 1.15752C10.9634 1.08722 10.8804 1.03143 10.789 0.993349C10.6976 0.955272 10.5996 0.935669 10.5006 0.935669C10.4016 0.935669 10.3036 0.955272 10.2122 0.993349C10.1208 1.03143 10.0378 1.08722 9.9681 1.15752L6.5331 4.59251C6.46337 4.66281 6.38042 4.71861 6.28903 4.75668C6.19763 4.79476 6.0996 4.81436 6.0006 4.81436C5.90159 4.81436 5.80356 4.79476 5.71216 4.75668C5.62077 4.71861 5.53782 4.66281 5.4681 4.59251L2.03309 1.15752C1.96337 1.08722 1.88042 1.03143 1.78903 0.993349C1.69763 0.955272 1.5996 0.935669 1.50059 0.935669C1.40159 0.935669 1.30356 0.955272 1.21216 0.993349C1.12077 1.03143 1.03782 1.08722 0.968094 1.15752C0.828406 1.29804 0.75 1.48813 0.75 1.68627C0.75 1.88441 0.828406 2.07449 0.968094 2.21502L4.4106 5.65751C4.83247 6.07886 5.40434 6.31553 6.0006 6.31553C6.59685 6.31553 7.16872 6.07886 7.5906 5.65751L11.0331 2.21502C11.1728 2.07449 11.2512 1.88441 11.2512 1.68627C11.2512 1.48813 11.1728 1.29804 11.0331 1.15752Z' fill='%23004489'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 96%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.field-element select:required:valid{
+    color: #5c5c5c;
+}
+.field-element select option[value=""][disabled]{
+    display: none;
+}
+
+.field-element select:active{
+    border-color: #5c5c5c;
+}
+.field-element select:focus{
+    border-color: #5c5c5c;
+}
+.field-element select:focus-visible{
+    border:2px solid #5c5c5c;
+}
+.field-element select:visited{
+    border-color: #5c5c5c;
+}
+.field-element input:active{
+    border-color: #5c5c5c;
+}
+.field-element input:focus{
+    border-color: #5c5c5c;
+}
+.field-element input:focus-visible{
+    border:2px solid #5c5c5c;
+}
+
+.field-element input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.form-button-requeriment{
+    background: #E20025 !important;
+    height: 44px;
+    width: 230px;
+    cursor: pointer;
+    font-family: 'Trenda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.inputFileForm > input[type=file]{
+    position: relative;
+    padding-left: 8px;
+}
+.inputFileForm > input[type=file]::file-selector-button{
+    display: none;
+}
+.inputFileForm >label{
+    width: 56px;
+    height: 38px;
+    background: #004489;
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    right: 58px;
+}
+.inputFileForm>label>img{
+    width: 100%;
+    margin: 15%;
+}
+
+#input-file-form{
+    width: 0%;
+   display: none;
+}
+
+.mleftForm{
+    margin-left: 2.5%;
+}
+.mtopForm{
+    margin-top: 2.5%;
+}
+.mbotForm{
+    margin-bottom: 2.5%;
+}
+.mrightForm{
+    margin-right: 2.5%;
+}
+
+.flex{
+    display: flex;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+#input-checkboxTerm {
+    flex:1;
+}
+#label-checkboxTerm{
+    margin-left: 10px;
+    text-align: justify;
+    font-size: 14px;
+}
+
+#label-checkboxTerm a{
+    color:#004489
+}
+.error-message{
+    display: none;
+    font-family: 'Trenda';
+    font-style: normal;
+    color:#E20025;
+
+}
+.succesfull-message{
+    display: none;
+    font-family: 'Trenda';
+    font-style: normal;
+    color: #004489;
+
+}
+/*attention requeriment*/
+#content-requeriment{
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.container-requerimentQuery{
+    padding-top: 49px;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 56px;
+}
+
+.title-requeriment>h6{
+    font-family: 'Trenda';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #004489;
+    margin-top: 0px;
+    margin-bottom: 18px;
+   
+}
+
+.title-requeriment>h4{
+    font-family: 'Vinci Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #5C5C5C;
+}
+
+
+.container-search{
+    display: none;
+}
+
+.container-search>div>h2{
+    font-family: 'Vinci Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #5C5C5C;
+}
+
+
+
+.requeriment-message-before{
+    display: block;
+    font-family: 'Vinci Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130.5%;
+    text-align: center;
+    color: #C5C5C5;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.requeriment-message-after{
+    display: none;
+    font-family: 'Vinci Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130.5%;
+    text-align: center;
+    color: #C5C5C5;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.requeriment-message-before>p{
+   margin: 0 auto;
+}
+.requeriment-message-before >p>span{
+    color: #004489;
+}
+
+.requeriment-message-after>p{
+    margin: 0 auto;
+ }
+ .requeriment-message-after >p>span{
+     color: #004489;
+ }
+ 
+#tableResultRequeriment>thead>th{
+    font-family: 'Trenda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #004489;
+}
+#tableResultRequeriment th  {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #004489;
+}
+
+#tableResultRequeriment td {
+    cursor: pointer;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 14px;
+    color:#5C5C5C;
+}
+
+.boxResult{
+    display: flex;
+    background: rgba(0, 31, 63, 0.05);
+    border-radius: 20px;
+}
+
+.boxResult-detail{
+    display: none;
+}
+
+.boxDetail-content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 6%;
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+.boxDetail-row{
+    display: flex;
+}
+.boxDetail-item{
+    display: flex;
+    margin-right: 10%;
+}
+.boxDetail-item>p{
+    font-family: 'Trenda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #004489;
+}
+.boxDetail-item>span{
+    font-family: 'Vinci Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #5C5C5C;
+}
+
+.boxResult-Error{
+    display: none;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    padding-left: 36px;
+}
+.boxResult-Error--Text{
+    font-family: 'Trenda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #E20025;
+}
+
+.serachRequeriment-result{
+    font-family: 'Vinci Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color:#5C5C5C;
+}
+
+
+
+.modalRequeriment{
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(92,92,92,0.4); 
+}
+
+
+.modalContentRequeriment{
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    position: relative;
+}
+.exitModalRequeriment{
+    display: none ;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #FFFFFF;
+    color: #004489;
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.modalRequeriment-header{
+
+}
+.modalRequeriment-header-title{
+
+}
+
+
+
+
+@media (max-width:600px){
+    .title-requeriment>h6{
+        font-size: 22px;
+    }
+    .title-requeriment>h4{
+        font-size: 16px;
+    }
+    .serachRequeriment-result{
+        font-size: 16px;
+    }
+    #tableResultRequeriment>thead>tr>th{
+        font-size: 16px;
+    }
+    .boxResult-Error{
+        padding-top: 28px;
+        padding-bottom: 28px;
+        padding-left: 14px;
+    }
+    .boxResult-Error--Text{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:450px){
+    .title-requeriment>h6{
+        font-size: 18px;
+    }
+    .title-requeriment>h4{
+        font-size: 14px;
+    }
+    .serachRequeriment-result{
+        font-size: 14px;
+    }
+    #tableResultRequeriment>thead>tr>th{
+        font-size: 14px;
+    }
+    .boxResult-Error--Text{
+        font-size: 14px;
+    }
+    .boxResult-Error{
+        padding-top: 22px;
+        padding-bottom: 22px;
+        padding-left: 12px;
+    }
+    .boxResult-Error--Text{
+        font-size: 14px;
+    }
+}
