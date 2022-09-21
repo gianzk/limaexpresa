@@ -15,10 +15,10 @@ use App\Http\Controllers\LimaController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/v1/listatiposolicitud',[LimaController::class,'listSolicitud']);
 Route::get('v1/tiposolicitud/{id}',[LimaController::class,'getSolicitud']);
+Route::post('v1/registrarsolicitud',[LimaController::class,'registerSolicitud']);
+
+
 Route::get('v1/demo',[LimaController::class,'getData']);
 Route::get('v1/demotwo',[LimaController::class,'getDataTwo']);
