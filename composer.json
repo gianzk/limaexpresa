@@ -1,0 +1,15 @@
+{
+    "name": "usuario/le",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\Le\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gianmarco Gutierrez",
+            "email": "g.gutierrez@praxisglobe.net"
+        }
+    ],
+    "require": {}
+}
