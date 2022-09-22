@@ -20,5 +20,5 @@ Route::get('v1/tiposolicitud/{id}',[LimaController::class,'getSolicitud']);
 Route::post('v1/registrarsolicitud',[LimaController::class,'registerSolicitud']);
 
 
-Route::get('v1/demo',[LimaController::class,'getData']);
-Route::get('v1/demotwo',[LimaController::class,'getDataTwo']);
+Route::get('v1/listprocess/{typedocument}/{numberdocument}',[LimaController::class,'listaProcesos']);
+Route::get('v1/detalleprocess/{processnumber}',[LimaController::class,'detalleProceso']);
