@@ -33,7 +33,7 @@ class LimaController extends Controller{
         $fields=$request->validate([
             'ddd'=>'string',
             'telefone'=>'string',
-            'none'=>'string',
+            'nome'=>'string',
             'CodTipoProcesso'=>'string',
             'Descricao'=>'string',
             'email'=>'string',
@@ -47,7 +47,7 @@ class LimaController extends Controller{
          $params=array(
             'ddd'=>$fields['ddd'],
             'telefone'=>$fields['telefone'],
-            'none'=>$fields['none'],
+            'nome'=>$fields['nome'],
             'CodTipoProcesso'=>$fields['CodTipoProcesso'],
             'Descricao'=>$fields['Descricao'],
             'email'=>$fields['email'],
