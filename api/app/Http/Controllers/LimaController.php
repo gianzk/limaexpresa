@@ -14,6 +14,7 @@ class LimaController extends Controller{
         $xml = simplexml_load_string($xml_string);
         $json = json_encode($xml);
         $array = json_decode($json,TRUE);
+
         return response($array,200);
     }
     public function getSolicitud($id){
