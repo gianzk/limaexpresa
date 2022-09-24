@@ -203,7 +203,7 @@ class DevController extends Controller{
         ]);
         $response='{
             "returnCode": 0,
-            "processNumber": 7364022,
+            "processNumber": 7393022,
             "message": "Solicitação enviada com sucesso. Solicitação enviada. Porém, houve um problema ao anexar o arquivo.Longitud no válida para una matriz de caracteres Base-64."
         }';
         $mJson=json_decode($response,true);
@@ -213,7 +213,7 @@ class DevController extends Controller{
 
     public function listaProcesos($typedocument,$numberdocument){
         $data='[]';
-        if($typedocument=='dni'&&$numberdocument='12345678'){
+        if(strtoupper($typedocument)=='DNI'&& $numberdocument=='12345678'){
             $data='{
                 "NewDataSet": {
                     "ProcessList": [
@@ -264,18 +264,18 @@ class DevController extends Controller{
             "Status": "Não encontrado",
             "FinishDate": ""
         }';
-        if($processnumber=="7364022"){
+        if($processnumber=="7393022"){
             $data='{
-                "DateTime": "22/09/2022 07:12:19 p.m.",
-                "ProcessNumber": 7364022,
-                "UserName": " ",
+                "DateTime": "23/09/2022 06:10:56 p.m.",
+                "ProcessNumber": 7393022,
+                "UserName": "JUAN PEREZ          ",
                 "DocumentType": "DNI",
                 "DocumentNumber": "12345678        ",
-                "Phone": "",
-                "EmailAddress": " ",
-                "ProcessType": "RECLAMO - MANTENIMIENTO ",
-                "ProcessDetail": "VIA  - CALZADA",
-                "Description": "RECLAMO - MANTENIMIENTO  ",
+                "Phone": " 955555481245",
+                "EmailAddress": "12321321@gmail.com                  ",
+                "ProcessType": "SOLICITUD - MANTENIMIENTO",
+                "ProcessDetail": "VIA ",
+                "Description": "ddddddddddd           ",
                 "Reply": "",
                 "Status": "Pendente",
                 "FinishDate": ""

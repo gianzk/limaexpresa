@@ -306,7 +306,9 @@ input[type=number]::-webkit-outer-spin-button {
 .boxResult-detail{
     display: none;
 }
-
+.tableResult-Requeriment{
+    display: none;
+}
 .boxDetail-content{
     display: flex;
     flex-direction: column;

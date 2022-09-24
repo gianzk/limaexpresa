@@ -52,57 +52,9 @@ const convertBase64 = (file) => {
 
 
 
-function addEvent(data){
-    function getDetail(data){
-        console.log(data,"data");
-        document.getElementById("tableResultRequeriment").style.display='none';
-        document.getElementsByClassName('boxResult-detail')[0].style.display='block';
-    }
-   data.map(e=>{
-        let id=e.split("-")[1];
-        console.log(typeof id);
-        document.getElementById(e).addEventListener("click",function(){
-            getDetail(id);
-        },false);
-   })
-}
-
-
-function buildTable(data){
-   let tableBuild=document.getElementById("tableResultRequeriment");
-  
-   data.map((e,index)=>{
-    
-    let template=`<tr id="tx-${e.nroreq}-${index}">
-                        <td>${e.nroreq}</td>
-                        <td>${e.fecha}</td>
-                        <td>${e.tema}</td>
-                        <td>${e.categoria}</td>
-                        <td>${e.ESTADO}</td>
-                     </tr>`;
-    tableBuild.innerHTML+=template;
-    arrayId.push(`tx-${e.nroreq}-${index}`);
-   });
-   addEvent(arrayId);
-}
-
-function showError(){
-    let show=document.getElementsByClassName("boxResult-Error")[0];
-    show.style.display="block";
-}   
-
-function pivotMessage(){
-    let hidden=document.getElementsByClassName("requeriment-message-before")[0];
-    let show=document.getElementsByClassName("requeriment-message-after")[0];
-    let containerShow=document.getElementsByClassName("container-search")[0];
-    hidden.style.display="none";
-    show.style.display="block";
-    containerShow.style.display="block";    
-}
 
 window.addEventListener('load',function(){
     const formAttention=document.getElementById('attention-form');
-    const formRequeriment=document.getElementById('requeriment-form');
     const inputFileSecction = document.getElementById("input-file-form");
 
     inputFileSecction.addEventListener("change", (e) => {
@@ -126,15 +78,7 @@ window.addEventListener('load',function(){
         //FXFETCH();
     });
 
-    formRequeriment.addEventListener('submit',(event)=>{
-        event.preventDefault();
-        let typeDocument=formRequeriment.elements["selectAttention-tipoDocumento"].value;
-        let numeroDocument=formRequeriment.elements["inputAttention-nroDocument"].value.trim();
-       buildTable(dataTest);
-        pivotMessage();
-      //  showError();
 
-    });
 
 });
 
